@@ -1,0 +1,4 @@
+name = "plantilla"
+main = "./dist/server/entry.mjs"
+compatibility_date = "2024-03-13"
+node_compat = true
