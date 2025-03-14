@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
-import { Navbar } from "@/components/Navbar"; // Importar el navbar de React
+import { Navbar } from "@/components/Navbar"; 
+import Footer from "@/components/Footer.astro";
 
 const { 
   title = "CacaoByte S.A", 
@@ -39,5 +40,6 @@ const {
   <main class="pt-20">
     <slot />
   </main>
+  <Footer />
 </body>
 </html>

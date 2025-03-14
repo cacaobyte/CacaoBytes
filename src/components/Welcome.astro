@@ -1,5 +1,6 @@
 ---
 import logo from '../assets/CacaoByte.png';
+import { services, advantages } from '../Models/Welcome/welcomeModels';
 ---
 
 <!-- Hero Section -->
@@ -34,88 +35,43 @@ import logo from '../assets/CacaoByte.png';
   </div>
 </section>
 
-
-<!-- Sección de Servicios Mejorada -->
+<!-- Sección de Servicios -->
 <section class="py-16 bg-gray-50 text-gray-900">
   <div class="max-w-6xl mx-auto text-center">
     <h2 class="text-4xl font-bold text-gray-800">Nuestros Servicios</h2>
     <p class="text-gray-600 mt-2">Innovación, Eficiencia y Seguridad en Soluciones Digitales</p>
     
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-      <!-- Tarjeta de Servicio -->
-      <div class="relative p-6 bg-white rounded-xl shadow-lg border-2 border-transparent transition-all hover:border-red-500 hover:shadow-xl transform hover:-translate-y-2">
-        <div class="flex items-center gap-4">
-          <span class="text-4xl text-blue-600">🌐</span>
-          <h3 class="text-2xl font-semibold text-gray-800">Desarrollo Web</h3>
+      {services.map(service => (
+        <div class={`relative p-6 bg-white rounded-xl shadow-lg border-2 border-transparent transition-all hover:border-opacity-100 hover:shadow-xl transform hover:-translate-y-2 ${service.color}`}>
+          <div class="flex items-center gap-4">
+            <span class={`text-4xl ${service.color}`}>{service.icon}</span>
+            <h3 class="text-2xl font-semibold text-gray-800">{service.title}</h3>
+          </div>
+          <p class="text-gray-600 mt-2">{service.description}</p>
         </div>
-        <p class="text-gray-600 mt-2">Diseñamos experiencias digitales que impulsan negocios.</p>
-      </div>
-
-      <div class="relative p-6 bg-white rounded-xl shadow-lg border-2 border-transparent transition-all hover:border-purple-500 hover:shadow-xl transform hover:-translate-y-2">
-        <div class="flex items-center gap-4">
-          <span class="text-4xl text-purple-600">⚙️</span>
-          <h3 class="text-2xl font-semibold text-gray-800">Software a la Medida</h3>
-        </div>
-        <p class="text-gray-600 mt-2">Soluciones tecnológicas adaptadas a cada necesidad.</p>
-      </div>
-
-      <div class="relative p-6 bg-white rounded-xl shadow-lg border-2 border-transparent transition-all hover:border-yellow-500 hover:shadow-xl transform hover:-translate-y-2">
-        <div class="flex items-center gap-4">
-          <span class="text-4xl text-yellow-600">🔒</span>
-          <h3 class="text-2xl font-semibold text-gray-800">Seguridad Informática</h3>
-        </div>
-        <p class="text-gray-600 mt-2">Protege tus sistemas con auditorías y capacitación.</p>
-      </div>
-
-      <div class="relative p-6 bg-white rounded-xl shadow-lg border-2 border-transparent transition-all hover:border-green-500 hover:shadow-xl transform hover:-translate-y-2">
-        <div class="flex items-center gap-4">
-          <span class="text-4xl text-green-600">☁️</span>
-          <h3 class="text-2xl font-semibold text-gray-800">Software como Servicio (SaaS)</h3>
-        </div>
-        <p class="text-gray-600 mt-2">Plataformas escalables y accesibles en la nube.</p>
-      </div>
-
-      <div class="relative p-6 bg-white rounded-xl shadow-lg border-2 border-transparent transition-all hover:border-red-500 hover:shadow-xl transform hover:-translate-y-2">
-        <div class="flex items-center gap-4">
-          <span class="text-4xl text-red-600">🚀</span>
-          <h3 class="text-2xl font-semibold text-gray-800">Transformación Digital</h3>
-        </div>
-        <p class="text-gray-600 mt-2">Impulsamos la modernización de empresas con tecnología.</p>
-      </div>
-
-      <div class="relative p-6 bg-white rounded-xl shadow-lg border-2 border-transparent transition-all hover:border-blue-500 hover:shadow-xl transform hover:-translate-y-2">
-        <div class="flex items-center gap-4">
-          <span class="text-4xl text-blue-600">📊</span>
-          <h3 class="text-2xl font-semibold text-gray-800">Inteligencia de Negocios</h3>
-        </div>
-        <p class="text-gray-600 mt-2">Analizamos datos y potenciamos la toma de decisiones.</p>
-      </div>
+      ))}
     </div>
   </div>
 </section>
 
 
 <!-- Sección de Ventajas -->
-<section class="py-16 bg-gray-100 text-gray-900">
+<section class="py-16 bg-white text-gray-900 ">
   <div class="max-w-6xl mx-auto text-center">
-    <h2 class="text-4xl font-bold">¿Por qué elegir CacaoByte?</h2>
+    <h2 class="text-4xl font-bold text-gray-800">¿Por qué elegir CacaoByte?</h2>
     <p class="text-gray-600 mt-2">Más que una empresa de software, somos tu socio estratégico.</p>
-    
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-      <div class="p-6 bg-white rounded-xl shadow-md transition-all transform hover:scale-105 hover:shadow-lg">
-        <h3 class="text-2xl font-semibold">💡 Innovación Constante</h3>
-        <p class="text-gray-600 mt-2">Desarrollamos soluciones tecnológicas avanzadas.</p>
-      </div>
 
-      <div class="p-6 bg-white rounded-xl shadow-md transition-all transform hover:scale-105 hover:shadow-lg">
-        <h3 class="text-2xl font-semibold">⚡ Eficiencia y Calidad</h3>
-        <p class="text-gray-600 mt-2">Optimizamos recursos y maximizamos resultados.</p>
-      </div>
-
-      <div class="p-6 bg-white rounded-xl shadow-md transition-all transform hover:scale-105 hover:shadow-lg">
-        <h3 class="text-2xl font-semibold">🤝 Compromiso Total</h3>
-        <p class="text-gray-600 mt-2">Tu éxito es nuestra prioridad, trabajamos contigo.</p>
-      </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 py-4">
+      {advantages.map(advantage => (
+        <div class={`p-6 bg-white rounded-xl shadow-lg border-2 border-transparent transition-all hover:border-opacity-100 hover:shadow-xl transform hover:-translate-y-2 ${advantage.color}`}>
+          <div class="flex items-center gap-4">
+            <span class={`text-4xl ${advantage.color}`}>{advantage.icon}</span>
+            <h3 class="text-2xl font-semibold text-gray-800">{advantage.title}</h3>
+          </div>
+          <p class="text-gray-600 mt-2">{advantage.description}</p>
+        </div>
+      ))}
     </div>
   </div>
 </section>
