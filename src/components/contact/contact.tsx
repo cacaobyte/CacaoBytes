@@ -1,4 +1,5 @@
 import { useState } from "react";
+import emailjs from "emailjs-com";
 import "../../styles/global.css";
 
 const subjects = [
@@ -19,21 +20,37 @@ const ContactForm = () => {
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState(subjects[0]);
   const [message, setMessage] = useState("");
+  const [status, setStatus] = useState("");
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
 
-    const mailtoLink = `mailto:cacaobyte@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
-      `Nombre: ${name}%0D%0ACorreo: ${email}%0D%0AMensaje:%0D%0A${message}`
-    )}`;
+    const templateParams = {
+      name: name, 
+      email: email, 
+      title: subject,
+      message: message,
+    };
 
-    window.location.href = mailtoLink;
+    emailjs.send(
+      "service_0bauhcw", // ID del servicio
+      "template_wwpxgtl", // ID de la plantilla
+      templateParams,
+      "lnlmSqUb3K9Dd24F1" // Public Key
+    )
+    .then((response) => {
+      console.log("SUCCESS!", response.status, response.text);
+      setStatus("Mensaje enviado correctamente ✅");
+    })
+    .catch((err) => {
+      console.error("FAILED...", err);
+      setStatus("Error al enviar el mensaje ❌");
+    });
   };
 
   return (
     <form className="bg-white p-6 sm:p-8 rounded-lg shadow-lg w-full max-w-lg mx-auto mt-6 sm:mt-8" onSubmit={handleSubmit}>
       <div className="grid grid-cols-1 gap-4">
-        {/* Nombre */}
         <div>
           <label htmlFor="name" className="block text-lg font-semibold text-gray-700">Nombre</label>
           <input
@@ -46,7 +63,6 @@ const ContactForm = () => {
           />
         </div>
 
-        {/* Correo Electrónico */}
         <div>
           <label htmlFor="email" className="block text-lg font-semibold text-gray-700">Correo Electrónico</label>
           <input
@@ -59,7 +75,6 @@ const ContactForm = () => {
           />
         </div>
 
-        {/* Asunto */}
         <div>
           <label htmlFor="subject" className="block text-lg font-semibold text-gray-700">Asunto</label>
           <select
@@ -74,7 +89,6 @@ const ContactForm = () => {
           </select>
         </div>
 
-        {/* Mensaje */}
         <div>
           <label htmlFor="message" className="block text-lg font-semibold text-gray-700">Mensaje</label>
           <textarea
@@ -87,12 +101,13 @@ const ContactForm = () => {
           />
         </div>
 
-        {/* Botón de Envío */}
         <div className="text-center">
           <button type="submit" className="w-full py-3 bg-red-500 hover:bg-red-600 text-white rounded-lg shadow-lg transition">
             📩 Enviar Mensaje
           </button>
         </div>
+
+        {status && <p className="text-center text-green-600 mt-4">{status}</p>}
       </div>
     </form>
   );

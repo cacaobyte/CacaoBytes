@@ -11,7 +11,7 @@ const ContactPage = () => {
           Envíanos tu consulta y nos pondremos en contacto contigo lo antes posible.
         </p>
         <div className="mt-6 sm:mt-8">
-          <ContactForm />
+          <ContactForm  />
         </div>
       </div>
     </div>
