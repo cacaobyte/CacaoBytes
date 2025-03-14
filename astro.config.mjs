@@ -4,7 +4,8 @@ import react from "@astrojs/react";
 import cloudflare from "@astrojs/cloudflare"; 
 
 export default defineConfig({
-  adapter: cloudflare(), 
+  adapter: cloudflare(),
+  output: "static",
   vite: {
     plugins: [tailwind()],
   },
