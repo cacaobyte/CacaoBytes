@@ -85,37 +85,37 @@ export function Navbar() {
               className="absolute left-0 mt-2 w-60 bg-white shadow-lg rounded-md py-2 border border-gray-200 z-50"
             >
               <a 
-                href="/servicios/desarrollo-web" 
+                href="/services/web/web" 
                 className="flex items-center gap-2 px-4 py-2 hover:bg-gray-200 transition"
               >
                <span className="text-gray-800">Desarrollo Web</span>
               </a>
               <a 
-                href="/servicios/software-medida" 
+                href="/services/dev/dev" 
                 className="flex items-center gap-2 px-4 py-2 hover:bg-gray-200 transition"
               >
               <span className="text-gray-800">Software a la Medida</span>
               </a>
               <a 
-                href="/servicios/seguridad-informatica" 
+                href="/services/security/security" 
                 className="flex items-center gap-2 px-4 py-2 hover:bg-gray-200 transition"
               >
              <span className="text-gray-800">Seguridad Informática</span>
               </a>
               <a 
-                href="/servicios/saas" 
+                href="/services/saas/saas" 
                 className="flex items-center gap-2 px-4 py-2 hover:bg-gray-200 transition"
               >
               <span className="text-gray-800">Software como Servicio (SaaS)</span>
               </a>
               <a 
-                href="/servicios/transformacion-digital" 
+                href="/services/digital/digital" 
                 className="flex items-center gap-2 px-4 py-2 hover:bg-gray-200 transition"
               >
              <span className="text-gray-800">Transformación Digital</span>
               </a>
               <a 
-                href="/servicios/inteligencia-negocios" 
+                href="/services/business/business" 
                 className="flex items-center gap-2 px-4 py-2 hover:bg-gray-200 transition"
               >
               <span className="text-gray-800">Análisis de Negocios</span>
@@ -207,37 +207,37 @@ export function Navbar() {
                 className="absolute left-0 mt-2 w-60 bg-white shadow-lg rounded-md py-2 border border-gray-200 z-50"
               >
                 <a 
-                  href="/servicios/desarrollo-web" 
+                  href="/services/web/web" 
                   className="block px-4 py-2 hover:bg-gray-200 flex items-center gap-2 transition"
                 >
                   🌐 Desarrollo Web
                 </a>
                 <a 
-                  href="/servicios/software-medida" 
+                  href="/services/dev/dev" 
                   className="block px-4 py-2 hover:bg-gray-200 flex items-center gap-2 transition"
                 >
                   ⚙️ Software a la Medida
                 </a>
                 <a 
-                  href="/servicios/seguridad-informatica" 
+                  href="/services/security/security" 
                   className="block px-4 py-2 hover:bg-gray-200 flex items-center gap-2 transition"
                 >
                   🔒 Seguridad Informática
                 </a>
                 <a 
-                  href="/servicios/saas" 
+                  href="/services/saas/saas" 
                   className="block px-4 py-2 hover:bg-gray-200 flex items-center gap-2 transition"
                 >
                   ☁️ Software como Servicio (SaaS)
                 </a>
                 <a 
-                  href="/servicios/transformacion-digital" 
+                  href="/services/digital/digital" 
                   className="block px-4 py-2 hover:bg-gray-200 flex items-center gap-2 transition"
                 >
                   🚀 Transformación Digital
                 </a>
                 <a 
-                  href="/servicios/inteligencia-negocios" 
+                  href="/services/business/business" 
                   className="block px-4 py-2 hover:bg-gray-200 flex items-center gap-2 transition"
                 >
                   📊 Análisis de Negocios
