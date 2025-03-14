@@ -26,7 +26,7 @@ export function Navbar() {
         {/* 📌 Menú para pantallas grandes */}
         <nav className="hidden md:flex space-x-6">
           <a href="/" className="hover:text-blue-600 transition">Inicio</a>
-          <a href="/about" className="hover:text-blue-600 transition">Nosotros</a>
+          <a href="/about/about" className="hover:text-blue-600 transition">Nosotros</a>
           <a href="/clients" className="hover:text-blue-600 transition">Clientes</a>
 
           {/* 🔹 Dropdown Productos */}
