@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown } from "lucide-react"; // Íconos
 import { Button } from "@/components/ui/button"; // Botón de ShadCN
+import logo from '../assets/CacaoByte.png';
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,7 +20,7 @@ export function Navbar() {
       <div className="container mx-auto flex items-center justify-between p-4">
         {/* 🔹 Logo */}
         <a href="/" className="text-xl font-bold flex items-center gap-2">
-          🚀 AstroApp
+          CacaoByte S.A 
         </a>
 
         {/* 📌 Menú para pantallas grandes */}

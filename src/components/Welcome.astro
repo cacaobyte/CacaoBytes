@@ -2,26 +2,120 @@
 import logo from '../assets/CacaoByte.png';
 ---
 
-<section class="flex flex-col items-center justify-center min-h-screen text-center bg-white text-gray-900 px-6">
-  <div class="max-w-lg">
-    <img src={logo.src} alt="CacaoByte Logo" class="w-28 mx-auto mb-6 rounded-lg shadow-md" />
+<!-- Hero Section -->
+<section class="relative flex flex-col items-center justify-center min-h-screen text-center bg-gray-100 text-gray-900 px-6">
+  <!-- Fondo Hero con Opacidad -->
+  <div class="absolute inset-0 bg-[url('/fondo.jpg')] bg-cover bg-center opacity-20"></div>
 
-    <h1 class="text-4xl font-semibold text-gray-800">
-      Bienvenido a <span class="text-[#D12A40]">CacaoByte S.A.</span>
+  <div class="relative max-w-4xl mx-auto p-8 bg-white bg-opacity-90 rounded-xl shadow-xl animate-fade-in">
+    <img src={logo.src} alt="CacaoByte Logo" class="w-32 mx-auto mb-6" />
+
+    <h1 class="text-5xl font-bold text-gray-900 leading-tight">
+      Innovamos, Transformamos y Elevamos tu Negocio con <span class="text-[#D12A40]">Tecnología</span>
     </h1>
 
-    <p class="text-lg text-gray-600 mt-3 leading-relaxed">
-      Potenciamos negocios con tecnología innovadora. 
-      Desarrollamos sitios web, software a la medida y capacitamos en seguridad informática.
+    <p class="text-lg text-gray-700 mt-4">
+      En <strong>CacaoByte S.A.</strong>, no solo creamos soluciones, 
+      brindamos <strong>experiencia, innovación y eficiencia</strong> para llevar tu empresa al siguiente nivel.
+    </p>
+
+    <p class="mt-4 text-xl font-semibold text-gray-800">
+      "Soluciones digitales para el presente, innovación para el futuro."
     </p>
 
     <div class="mt-6 flex flex-col md:flex-row gap-4 justify-center">
-      <a href="/servicios" class="px-6 py-3 bg-[#D12A40] hover:bg-[#B92338] text-white rounded-lg shadow-md transition">
+      <a href="/servicios" class="px-6 py-3 bg-[#D12A40] hover:bg-[#B92338] text-white rounded-lg shadow-lg transition-all transform hover:scale-105">
         🚀 Nuestros Servicios
       </a>
-      <a href="/contacto" class="px-6 py-3 bg-gray-800 hover:bg-gray-700 text-white rounded-lg shadow-md transition">
+      <a href="/contacto" class="px-6 py-3 bg-gray-800 hover:bg-gray-700 text-white rounded-lg shadow-lg transition-all transform hover:scale-105">
         📩 Contáctanos
       </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- Sección de Servicios Mejorada -->
+<section class="py-16 bg-gray-50 text-gray-900">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 class="text-4xl font-bold text-gray-800">Nuestros Servicios</h2>
+    <p class="text-gray-600 mt-2">Innovación, Eficiencia y Seguridad en Soluciones Digitales</p>
+    
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+      <!-- Tarjeta de Servicio -->
+      <div class="relative p-6 bg-white rounded-xl shadow-lg border-2 border-transparent transition-all hover:border-red-500 hover:shadow-xl transform hover:-translate-y-2">
+        <div class="flex items-center gap-4">
+          <span class="text-4xl text-blue-600">🌐</span>
+          <h3 class="text-2xl font-semibold text-gray-800">Desarrollo Web</h3>
+        </div>
+        <p class="text-gray-600 mt-2">Diseñamos experiencias digitales que impulsan negocios.</p>
+      </div>
+
+      <div class="relative p-6 bg-white rounded-xl shadow-lg border-2 border-transparent transition-all hover:border-purple-500 hover:shadow-xl transform hover:-translate-y-2">
+        <div class="flex items-center gap-4">
+          <span class="text-4xl text-purple-600">⚙️</span>
+          <h3 class="text-2xl font-semibold text-gray-800">Software a la Medida</h3>
+        </div>
+        <p class="text-gray-600 mt-2">Soluciones tecnológicas adaptadas a cada necesidad.</p>
+      </div>
+
+      <div class="relative p-6 bg-white rounded-xl shadow-lg border-2 border-transparent transition-all hover:border-yellow-500 hover:shadow-xl transform hover:-translate-y-2">
+        <div class="flex items-center gap-4">
+          <span class="text-4xl text-yellow-600">🔒</span>
+          <h3 class="text-2xl font-semibold text-gray-800">Seguridad Informática</h3>
+        </div>
+        <p class="text-gray-600 mt-2">Protege tus sistemas con auditorías y capacitación.</p>
+      </div>
+
+      <div class="relative p-6 bg-white rounded-xl shadow-lg border-2 border-transparent transition-all hover:border-green-500 hover:shadow-xl transform hover:-translate-y-2">
+        <div class="flex items-center gap-4">
+          <span class="text-4xl text-green-600">☁️</span>
+          <h3 class="text-2xl font-semibold text-gray-800">Software como Servicio (SaaS)</h3>
+        </div>
+        <p class="text-gray-600 mt-2">Plataformas escalables y accesibles en la nube.</p>
+      </div>
+
+      <div class="relative p-6 bg-white rounded-xl shadow-lg border-2 border-transparent transition-all hover:border-red-500 hover:shadow-xl transform hover:-translate-y-2">
+        <div class="flex items-center gap-4">
+          <span class="text-4xl text-red-600">🚀</span>
+          <h3 class="text-2xl font-semibold text-gray-800">Transformación Digital</h3>
+        </div>
+        <p class="text-gray-600 mt-2">Impulsamos la modernización de empresas con tecnología.</p>
+      </div>
+
+      <div class="relative p-6 bg-white rounded-xl shadow-lg border-2 border-transparent transition-all hover:border-blue-500 hover:shadow-xl transform hover:-translate-y-2">
+        <div class="flex items-center gap-4">
+          <span class="text-4xl text-blue-600">📊</span>
+          <h3 class="text-2xl font-semibold text-gray-800">Inteligencia de Negocios</h3>
+        </div>
+        <p class="text-gray-600 mt-2">Analizamos datos y potenciamos la toma de decisiones.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Sección de Ventajas -->
+<section class="py-16 bg-gray-100 text-gray-900">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 class="text-4xl font-bold">¿Por qué elegir CacaoByte?</h2>
+    <p class="text-gray-600 mt-2">Más que una empresa de software, somos tu socio estratégico.</p>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+      <div class="p-6 bg-white rounded-xl shadow-md transition-all transform hover:scale-105 hover:shadow-lg">
+        <h3 class="text-2xl font-semibold">💡 Innovación Constante</h3>
+        <p class="text-gray-600 mt-2">Desarrollamos soluciones tecnológicas avanzadas.</p>
+      </div>
+
+      <div class="p-6 bg-white rounded-xl shadow-md transition-all transform hover:scale-105 hover:shadow-lg">
+        <h3 class="text-2xl font-semibold">⚡ Eficiencia y Calidad</h3>
+        <p class="text-gray-600 mt-2">Optimizamos recursos y maximizamos resultados.</p>
+      </div>
+
+      <div class="p-6 bg-white rounded-xl shadow-md transition-all transform hover:scale-105 hover:shadow-lg">
+        <h3 class="text-2xl font-semibold">🤝 Compromiso Total</h3>
+        <p class="text-gray-600 mt-2">Tu éxito es nuestra prioridad, trabajamos contigo.</p>
+      </div>
     </div>
   </div>
 </section>
