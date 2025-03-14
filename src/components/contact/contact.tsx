@@ -27,10 +27,11 @@ const ContactForm = () => {
 
     const templateParams = {
       name: name, 
-      email: email, 
+      email: email,  
       title: subject,
       message: message,
-    };
+   };
+   
 
     emailjs.send(
       "service_0bauhcw", // ID del servicio

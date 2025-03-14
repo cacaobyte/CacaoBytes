@@ -14,6 +14,7 @@ const ContactPage = () => {
           <ContactForm  />
         </div>
       </div>
+      <div className="py-10"></div>
     </div>
   );
 };
