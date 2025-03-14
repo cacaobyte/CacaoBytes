@@ -1,0 +1,59 @@
+---
+const faqs = [
+  {
+    question: "¿Qué servicios ofrece CacaoByte S.A.?",
+    answer:
+      "CacaoByte S.A. ofrece soluciones tecnológicas como desarrollo web, software a la medida, seguridad informática, software como servicio (SaaS), transformación digital y análisis de negocios.",
+  },
+  {
+    question: "¿Cómo puedo solicitar una cotización?",
+    answer:
+      "Puedes solicitar una cotización a través de nuestro formulario de contacto, seleccionando el servicio que te interesa y enviando los detalles de tu solicitud.",
+  },
+  {
+    question: "¿Qué productos tienen disponibles?",
+    answer:
+      "Ofrecemos productos como SoftByte Commerce (POS SaaS), Byte Recipes (Cotización de Materia Prima) y Byte Events (Gestión de Eventos).",
+  },
+  {
+    question: "¿Cómo puedo contactar con soporte técnico?",
+    answer:
+      "Puedes contactarnos por correo electrónico a cacaobyte@gmail.com o a través de nuestra página de contacto.",
+  },
+  {
+    question: "¿Tienen soluciones personalizadas?",
+    answer:
+      "Sí, desarrollamos soluciones tecnológicas a la medida según las necesidades de cada cliente.",
+  },
+];
+---
+
+<section class="bg-gray-100 text-gray-900 py-12 px-6 md:px-12">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-4xl font-extrabold text-red-500">Preguntas Frecuentes</h2>
+    <p class="text-lg text-gray-600 mt-4">
+      Encuentra respuestas a las preguntas más comunes sobre nuestros servicios y productos.
+    </p>
+  </div>
+
+  <div class="max-w-4xl mx-auto mt-8 space-y-4">
+    {faqs.map(({ question, answer }) => (
+      <details 
+        class="bg-white p-6 rounded-lg shadow-lg border border-gray-300 transition-all duration-300 ease-in-out open:border-red-500 open:shadow-md"
+      >
+        <summary class="text-lg font-semibold cursor-pointer text-gray-800 flex justify-between items-center px-2 py-3">
+          {question}
+          <span class="text-red-500 text-2xl transition-transform duration-200 details-icon">+</span>
+        </summary>
+        <p class="mt-3 text-gray-600 px-2">{answer}</p>
+      </details>
+    ))}
+  </div>
+  <div class="py-10"></div>
+</section>
+
+<style>
+  details[open] .details-icon {
+    transform: rotate(45deg);
+  }
+</style>
