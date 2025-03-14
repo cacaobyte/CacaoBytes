@@ -1,21 +1,26 @@
 ---
-import astroLogo from '../assets/astro.svg';
+import logo from '../assets/CacaoByte.png';
 ---
 
-<section class="flex flex-col items-center justify-center h-screen text-center bg-gradient-to-r from-gray-900 to-gray-800 text-white px-6">
+<section class="flex flex-col items-center justify-center min-h-screen text-center bg-white text-gray-900 px-6">
   <div class="max-w-lg">
-    <img src={astroLogo.src} alt="Astro Logo" class="w-24 mx-auto mb-6" />
-    <h1 class="text-3xl font-bold">¡Bienvenido a Astro con Tailwind y ShadCN!</h1>
-    <p class="text-lg text-gray-300 mt-3">
-      Explora las mejores soluciones para crear sitios web rápidos y optimizados.
+    <img src={logo.src} alt="CacaoByte Logo" class="w-28 mx-auto mb-6 rounded-lg shadow-md" />
+
+    <h1 class="text-4xl font-semibold text-gray-800">
+      Bienvenido a <span class="text-[#D12A40]">CacaoByte S.A.</span>
+    </h1>
+
+    <p class="text-lg text-gray-600 mt-3 leading-relaxed">
+      Potenciamos negocios con tecnología innovadora. 
+      Desarrollamos sitios web, software a la medida y capacitamos en seguridad informática.
     </p>
 
     <div class="mt-6 flex flex-col md:flex-row gap-4 justify-center">
-      <a href="https://docs.astro.build" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-md transition">
-        📖 Leer la documentación
+      <a href="/servicios" class="px-6 py-3 bg-[#D12A40] hover:bg-[#B92338] text-white rounded-lg shadow-md transition">
+        🚀 Nuestros Servicios
       </a>
-      <a href="https://astro.build/chat" class="px-6 py-3 bg-gray-700 hover:bg-gray-600 text-white rounded-md transition">
-        💬 Unirse a Discord
+      <a href="/contacto" class="px-6 py-3 bg-gray-800 hover:bg-gray-700 text-white rounded-lg shadow-md transition">
+        📩 Contáctanos
       </a>
     </div>
   </div>
