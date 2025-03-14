@@ -5,15 +5,36 @@ import logo from '../../../assets/CacaoByte.png';
 <section class="py-16 bg-white text-gray-900">
   <div class="max-w-6xl mx-auto px-6 text-center">
     
-    <!-- Logo y título -->
-    <div class="flex flex-col items-center">
-      <img src={logo.src} alt="CacaoByte Logo" class="w-24 mb-4" />
-      <h2 class="text-4xl font-bold text-gray-800">SoftByte Commerce</h2>
-      <p class="text-gray-600 mt-2 max-w-3xl">
-        <strong>SoftByte Commerce</strong> es un <span class="text-red-500 font-semibold">Punto de Venta SaaS</span> diseñado para <strong>pequeñas, medianas y grandes empresas</strong>. 
-        Se adapta a negocios de cualquier tamaño y ofrece una solución integral con <strong>planes flexibles</strong> que evolucionan con tu empresa.
-      </p>
-    </div>
+    
+    <!-- Contenedor Principal -->
+    <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-10">
+      
+        <!-- Sección Izquierda - Logo e Introducción -->
+        <div class="text-center md:text-left">
+          <img src={logo.src} alt="CacaoByte Logo" class="w-24 mx-auto md:mx-0 mb-4" />
+          <h1 class="text-5xl font-extrabold text-gray-900">SoftByte Commerce</h1>
+          <p class="text-gray-600 mt-4 text-lg leading-relaxed">
+            <span class="text-red-500 font-semibold">Punto de Venta SaaS</span> diseñado para <strong>pequeñas, medianas y grandes empresas</strong>. 
+            Ofrece una solución integral con <strong>planes flexibles</strong> y funcionalidades avanzadas que evolucionan con tu negocio.
+          </p>
+        </div>
+  
+        <!-- Sección Derecha - Beneficios -->
+        <div class="relative bg-gray-50 p-8 rounded-xl shadow-lg border-l-4 border-red-500">
+          <h3 class="text-3xl font-semibold text-gray-800">Una Plataforma Completa</h3>
+          <p class="text-gray-600 mt-4 text-lg">
+            SoftByte Commerce no solo es un punto de venta, también incluye herramientas de <strong>gestión empresarial</strong>, 
+            <strong>recursos humanos</strong>, <strong>notificaciones automatizadas</strong> y más. 
+            Adaptamos el sistema según las necesidades de tu empresa con soluciones personalizadas.
+          </p>
+          <p class="text-gray-600 mt-4 text-lg">
+            Con opciones de pago <strong>mensuales o anuales</strong>, nuestros planes se ajustan a tu presupuesto. 
+            <a href="/contacto" class="text-red-500 font-semibold hover:underline">Contáctanos</a> para más información o una demostración.
+          </p>
+        </div>
+  
+      </div>
+  
 
     <!-- Beneficios principales -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
@@ -91,7 +112,7 @@ import logo from '../../../assets/CacaoByte.png';
     </div>
 
     <!-- CTA (Llamado a la acción) -->
-    <div class="mt-12">
+    <div class="mt-12 py-4">
       <h3 class="text-3xl font-semibold text-gray-800">Empieza Hoy con SoftByte Commerce</h3>
       <p class="text-gray-600 mt-2 max-w-xl mx-auto">
         Únete a nuestra red de empresas que confían en SoftByte Commerce para optimizar su negocio.
