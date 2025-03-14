@@ -1,4 +1,5 @@
 "use client";
+import "../styles/global.css"
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -126,7 +127,8 @@ export function Navbar() {
 
 
 
-          <a href="/contact" className="hover:text-blue-600 transition">Contacto</a>
+          <a href="/contact/contact" className="hover:text-blue-600 transition">Contacto</a>
+          <a href="/faqs/faqs" className="hover:text-blue-600 transition">Preguntas</a>
         </nav>
 
         {/* 📌 Botón de menú móvil */}
@@ -247,7 +249,8 @@ export function Navbar() {
 
 
 
-              <a href="/contact" className="block p-2 hover:bg-gray-100">Contacto</a>
+              <a href="/contact/contact" className="block p-2 hover:bg-gray-100">Contacto</a>
+              <a href="/faqs/faqs" className="block p-2 hover:bg-gray-100">Preguntas</a>
             </nav>
           </motion.div>
         )}
