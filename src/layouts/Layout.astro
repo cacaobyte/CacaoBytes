@@ -2,11 +2,12 @@
 import "../styles/global.css";
 import { Navbar } from "@/components/Navbar"; 
 import Footer from "@/components/Footer.astro";
+import logo from '../assets/CacaoByte.png';
 
 const { 
   title = "CacaoByte S.A", 
   description = "Descubre nuestras soluciones digitales.", 
-  image = "https://example.com/og-image.jpg", 
+  image = "/favicon.png", // 👈 Cambiar a favicon real
   url = "https://example.com", 
   twitter = "@cacaobyte" 
 } = Astro.props;
@@ -18,13 +19,22 @@ const {
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- 🟢 Favicon -->
+  <link rel="icon" type="image/png" href="/favicon.png"> <!-- Icono para navegadores -->
+  <link rel="apple-touch-icon" href="/favicon.png"> <!-- Icono para Apple -->
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"> <!-- Opción alternativa -->
+  
   <!-- 🟢 SEO Dinámico -->
   <title>{title}</title>
   <meta name="description" content={description} />
+  
+  <!-- 🟢 Open Graph (SEO para Redes Sociales) -->
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:image" content={image} />
   <meta property="og:url" content={url} />
+
+  <!-- 🟢 Twitter Card (SEO para Twitter) -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
@@ -40,6 +50,7 @@ const {
   <main class="pt-20">
     <slot />
   </main>
+
   <Footer />
 </body>
 </html>

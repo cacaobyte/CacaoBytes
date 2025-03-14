@@ -38,46 +38,110 @@ export function Navbar() {
               Productos <ChevronDown className="w-4 h-4 transition" />
             </button>
             {openDropdown === "productos" && (
-              <motion.div
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
-                className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md py-2"
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              className="absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-md py-2 border border-gray-200 z-50"
+            >
+              {/* 🔹 SaaS Principal */}
+              <a 
+                href="/productos/softbyte-commerce" 
+                className="block px-4 py-2 hover:bg-gray-200 flex items-center gap-2 transition"
               >
-                <a href="/productos/web" className="block px-4 py-2 hover:bg-gray-100">
-                  Desarrollo Web
-                </a>
-                <a href="/productos/tiendas" className="block px-4 py-2 hover:bg-gray-100">
-                  Tiendas Online
-                </a>
-              </motion.div>
-            )}
+                🏪 SoftByte Commerce (POS SaaS)
+              </a>
+              <a 
+                href="/productos/byte-recipes" 
+                className="block px-4 py-2 hover:bg-gray-200 flex items-center gap-2 transition"
+              >
+                📑 Byte Recipes (Cotización de Materia Prima)
+              </a>
+
+              {/* 🔹 Byte Events - Ecosistema */}
+              <div className="px-4 py-2 text-gray-600 font-semibold">
+                🎫 Byte Events (Gestión de Eventos)
+              </div>
+              <a 
+                href="/productos/byte-events/gestor" 
+                className="block px-6 py-2 hover:bg-gray-200 flex items-center gap-2 transition"
+              >
+                🎟️ Gestor de Eventos
+              </a>
+              <a 
+                href="/productos/byte-events/validadores" 
+                className="block px-6 py-2 hover:bg-gray-200 flex items-center gap-2 transition"
+              >
+                ✅ Validadores de Entradas
+              </a>
+              <a 
+                href="/productos/byte-events/admin" 
+                className="block px-6 py-2 hover:bg-gray-200 flex items-center gap-2 transition"
+              >
+                🛠️ Panel de Administración
+              </a>
+            </motion.div>
+          )}
+
           </div>
 
-          {/* 🔹 Dropdown Servicios */}
-          <div className="relative group">
-            <button
-              onClick={() => toggleDropdown("servicios")}
-              className="flex items-center gap-1 hover:text-blue-600 transition"
+        {/* 🔹 Dropdown Servicios */}
+        {/* 🔹 Dropdown Servicios */}
+        <div className="relative group">
+          <button
+            onClick={() => toggleDropdown("servicios")}
+            className="flex items-center gap-1 hover:text-blue-600 transition"
+          >
+            Servicios <ChevronDown className="w-4 h-4 transition" />
+          </button>
+          {openDropdown === "servicios" && (
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              className="absolute left-0 mt-2 w-60 bg-white shadow-lg rounded-md py-2 border border-gray-200 z-50"
             >
-              Servicios <ChevronDown className="w-4 h-4 transition" />
-            </button>
-            {openDropdown === "servicios" && (
-              <motion.div
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
-                className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md py-2"
+              <a 
+                href="/servicios/desarrollo-web" 
+                className="flex items-center gap-2 px-4 py-2 hover:bg-gray-200 transition"
               >
-                <a href="/servicios/seo" className="block px-4 py-2 hover:bg-gray-100">
-                  SEO & Marketing
-                </a>
-                <a href="/servicios/branding" className="block px-4 py-2 hover:bg-gray-100">
-                  Branding
-                </a>
-              </motion.div>
-            )}
-          </div>
+               <span className="text-gray-800">Desarrollo Web</span>
+              </a>
+              <a 
+                href="/servicios/software-medida" 
+                className="flex items-center gap-2 px-4 py-2 hover:bg-gray-200 transition"
+              >
+              <span className="text-gray-800">Software a la Medida</span>
+              </a>
+              <a 
+                href="/servicios/seguridad-informatica" 
+                className="flex items-center gap-2 px-4 py-2 hover:bg-gray-200 transition"
+              >
+             <span className="text-gray-800">Seguridad Informática</span>
+              </a>
+              <a 
+                href="/servicios/saas" 
+                className="flex items-center gap-2 px-4 py-2 hover:bg-gray-200 transition"
+              >
+              <span className="text-gray-800">Software como Servicio (SaaS)</span>
+              </a>
+              <a 
+                href="/servicios/transformacion-digital" 
+                className="flex items-center gap-2 px-4 py-2 hover:bg-gray-200 transition"
+              >
+             <span className="text-gray-800">Transformación Digital</span>
+              </a>
+              <a 
+                href="/servicios/inteligencia-negocios" 
+                className="flex items-center gap-2 px-4 py-2 hover:bg-gray-200 transition"
+              >
+              <span className="text-gray-800">Análisis de Negocios</span>
+              </a>
+            </motion.div>
+          )}
+        </div>
+
+
 
           <a href="/contact" className="hover:text-blue-600 transition">Contacto</a>
         </nav>
@@ -115,11 +179,53 @@ export function Navbar() {
                 Productos <ChevronDown className="w-4 h-4" />
               </button>
               {openDropdown === "productos" && (
-                <motion.div className="ml-4 space-y-2">
-                  <a href="/productos/web" className="block p-2 hover:bg-gray-100">Desarrollo Web</a>
-                  <a href="/productos/tiendas" className="block p-2 hover:bg-gray-100">Tiendas Online</a>
-                </motion.div>
-              )}
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                className="absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-md py-2 border border-gray-200 z-50"
+              >
+                {/* 🔹 SaaS Principal */}
+                <a 
+                  href="/productos/softbyte-commerce" 
+                  className="block px-4 py-2 hover:bg-gray-200 flex items-center gap-2 transition"
+                >
+                  🏪 SoftByte Commerce (POS SaaS)
+                </a>
+                <a 
+                  href="/productos/byte-recipes" 
+                  className="block px-4 py-2 hover:bg-gray-200 flex items-center gap-2 transition"
+                >
+                  📑 Byte Recipes (Cotización de Materia Prima)
+                </a>
+
+                {/* 🔹 Byte Events - Ecosistema */}
+                <div className="px-4 py-2 text-gray-600 font-semibold">
+                  🎫 Byte Events (Gestión de Eventos)
+                </div>
+                <a 
+                  href="/productos/byte-events/gestor" 
+                  className="block px-6 py-2 hover:bg-gray-200 flex items-center gap-2 transition"
+                >
+                  🎟️ Gestor de Eventos
+                </a>
+                <a 
+                  href="/productos/byte-events/validadores" 
+                  className="block px-6 py-2 hover:bg-gray-200 flex items-center gap-2 transition"
+                >
+                  ✅ Validadores de Entradas
+                </a>
+                <a 
+                  href="/productos/byte-events/admin" 
+                  className="block px-6 py-2 hover:bg-gray-200 flex items-center gap-2 transition"
+                >
+                  🛠️ Panel de Administración
+                </a>
+              </motion.div>
+            )}
+
+
+
 
               {/* 📌 Dropdown Servicios */}
               <button
@@ -129,11 +235,52 @@ export function Navbar() {
                 Servicios <ChevronDown className="w-4 h-4" />
               </button>
               {openDropdown === "servicios" && (
-                <motion.div className="ml-4 space-y-2">
-                  <a href="/servicios/seo" className="block p-2 hover:bg-gray-100">SEO & Marketing</a>
-                  <a href="/servicios/branding" className="block p-2 hover:bg-gray-100">Branding</a>
-                </motion.div>
-              )}
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                className="absolute left-0 mt-2 w-60 bg-white shadow-lg rounded-md py-2 border border-gray-200 z-50"
+              >
+                <a 
+                  href="/servicios/desarrollo-web" 
+                  className="block px-4 py-2 hover:bg-gray-200 flex items-center gap-2 transition"
+                >
+                  🌐 Desarrollo Web
+                </a>
+                <a 
+                  href="/servicios/software-medida" 
+                  className="block px-4 py-2 hover:bg-gray-200 flex items-center gap-2 transition"
+                >
+                  ⚙️ Software a la Medida
+                </a>
+                <a 
+                  href="/servicios/seguridad-informatica" 
+                  className="block px-4 py-2 hover:bg-gray-200 flex items-center gap-2 transition"
+                >
+                  🔒 Seguridad Informática
+                </a>
+                <a 
+                  href="/servicios/saas" 
+                  className="block px-4 py-2 hover:bg-gray-200 flex items-center gap-2 transition"
+                >
+                  ☁️ Software como Servicio (SaaS)
+                </a>
+                <a 
+                  href="/servicios/transformacion-digital" 
+                  className="block px-4 py-2 hover:bg-gray-200 flex items-center gap-2 transition"
+                >
+                  🚀 Transformación Digital
+                </a>
+                <a 
+                  href="/servicios/inteligencia-negocios" 
+                  className="block px-4 py-2 hover:bg-gray-200 flex items-center gap-2 transition"
+                >
+                  📊 Análisis de Negocios
+                </a>
+              </motion.div>
+            )}
+
+
 
               <a href="/contact" className="block p-2 hover:bg-gray-100">Contacto</a>
             </nav>
