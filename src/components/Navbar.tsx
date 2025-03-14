@@ -46,40 +46,23 @@ export function Navbar() {
             >
               {/* 🔹 SaaS Principal */}
               <a 
-                href="/productos/softbyte-commerce" 
+                href="/products/commerce/commerce" 
                 className="block px-4 py-2 hover:bg-gray-200 flex items-center gap-2 transition"
               >
                 🏪 SoftByte Commerce (POS SaaS)
               </a>
               <a 
-                href="/productos/byte-recipes" 
+                href="/products/recipes/recipes" 
                 className="block px-4 py-2 hover:bg-gray-200 flex items-center gap-2 transition"
               >
                 📑 Byte Recipes (Cotización de Materia Prima)
               </a>
 
               {/* 🔹 Byte Events - Ecosistema */}
-              <div className="px-4 py-2 text-gray-600 font-semibold">
+              <a href="/products/events/events" className="px-4 py-2 text-gray-600 font-semibold">
                 🎫 Byte Events (Gestión de Eventos)
-              </div>
-              <a 
-                href="/productos/byte-events/gestor" 
-                className="block px-6 py-2 hover:bg-gray-200 flex items-center gap-2 transition"
-              >
-                🎟️ Gestor de Eventos
               </a>
-              <a 
-                href="/productos/byte-events/validadores" 
-                className="block px-6 py-2 hover:bg-gray-200 flex items-center gap-2 transition"
-              >
-                ✅ Validadores de Entradas
-              </a>
-              <a 
-                href="/productos/byte-events/admin" 
-                className="block px-6 py-2 hover:bg-gray-200 flex items-center gap-2 transition"
-              >
-                🛠️ Panel de Administración
-              </a>
+             
             </motion.div>
           )}
 
@@ -187,39 +170,21 @@ export function Navbar() {
               >
                 {/* 🔹 SaaS Principal */}
                 <a 
-                  href="/productos/softbyte-commerce" 
+                  href="/products/commerce/commerce" 
                   className="block px-4 py-2 hover:bg-gray-200 flex items-center gap-2 transition"
                 >
                   🏪 SoftByte Commerce (POS SaaS)
                 </a>
                 <a 
-                  href="/productos/byte-recipes" 
+                  href="/products/recipes/recipes" 
                   className="block px-4 py-2 hover:bg-gray-200 flex items-center gap-2 transition"
                 >
                   📑 Byte Recipes (Cotización de Materia Prima)
                 </a>
 
                 {/* 🔹 Byte Events - Ecosistema */}
-                <div className="px-4 py-2 text-gray-600 font-semibold">
+                <a href="/products/events/events" className="px-4 py-2 text-gray-600 font-semibold">
                   🎫 Byte Events (Gestión de Eventos)
-                </div>
-                <a 
-                  href="/productos/byte-events/gestor" 
-                  className="block px-6 py-2 hover:bg-gray-200 flex items-center gap-2 transition"
-                >
-                  🎟️ Gestor de Eventos
-                </a>
-                <a 
-                  href="/productos/byte-events/validadores" 
-                  className="block px-6 py-2 hover:bg-gray-200 flex items-center gap-2 transition"
-                >
-                  ✅ Validadores de Entradas
-                </a>
-                <a 
-                  href="/productos/byte-events/admin" 
-                  className="block px-6 py-2 hover:bg-gray-200 flex items-center gap-2 transition"
-                >
-                  🛠️ Panel de Administración
                 </a>
               </motion.div>
             )}
