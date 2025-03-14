@@ -3,34 +3,51 @@ import logo from '../../assets/CacaoByte.png';
 ---
 
 <section class="py-16 bg-white text-gray-900">
-  <div class="max-w-6xl mx-auto text-center px-6">
+  <div class="max-w-6xl mx-auto px-6">
     
-    <!-- Logo y título -->
-    <div class="flex flex-col items-center">
-      <img src={logo.src} alt="CacaoByte Logo" class="w-20 mb-4" />
-      <h2 class="text-4xl font-bold text-gray-800">Sobre Nosotros</h2>
-      <p class="text-gray-600 mt-2 max-w-2xl">
-        Somos <strong>CacaoByte S.A.</strong>, una empresa dedicada a la <span class="text-red-500 font-semibold">innovación tecnológica</span> y a la creación de soluciones digitales estratégicas para empresas.
-      </p>
+    <!-- Contenedor Principal -->
+    <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-10">
+      
+      <!-- Sección Izquierda - Logo y Introducción -->
+      <div class="text-center md:text-left">
+        <img src={logo.src} alt="CacaoByte Logo" class="w-24 mx-auto md:mx-0 mb-4" />
+        <h2 class="text-4xl font-bold text-gray-800">Sobre Nosotros</h2>
+        <p class="text-gray-600 mt-4 text-lg leading-relaxed">
+          Somos <strong>CacaoByte S.A.</strong>, una empresa dedicada a la <span class="text-red-500 font-semibold">innovación tecnológica</span> y la creación de soluciones digitales estratégicas para empresas.
+        </p>
+      </div>
+
+      <!-- Sección Derecha - Historia -->
+      <div class="relative bg-gray-50 p-8 rounded-xl shadow-lg border-l-4 border-red-500">
+        <h3 class="text-3xl font-semibold text-gray-800">Nuestra Historia</h3>
+        <p class="text-gray-600 mt-4 text-lg">
+          Nacimos en el <strong>2024</strong> como una alianza entre colegas ingenieros en sistemas con la visión de transformar la industria digital. Desde el inicio, nuestro objetivo ha sido claro: 
+          <span class="text-red-500 font-semibold">ofrecer soluciones tecnológicas innovadoras</span> y accesibles para empresas de todos los tamaños.
+        </p>
+        <p class="text-gray-600 mt-4 text-lg">
+          Somos una empresa <span class="text-red-500 font-semibold">100% Guatemalteca</span>, y nuestro nombre refleja nuestra identidad. El <strong>Cacao</strong> representa uno de los productos más simbólicos de Guatemala, mientras que <strong>Byte</strong> nos vincula con la tecnología. Así nace <span class="text-red-500 font-semibold">CacaoByte S.A.</span>, una sociedad comprometida con la innovación y la excelencia digital.
+        </p>
+      </div>
+
     </div>
 
     <!-- Misión, Visión y Valores -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-      <div class="p-6 bg-gray-50 rounded-xl shadow-md hover:shadow-lg transition transform hover:-translate-y-2 border-t-4 border-red-500">
+      <div class="p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition transform hover:-translate-y-2 border-t-4 border-red-500">
         <h3 class="text-2xl font-semibold text-gray-800">🎯 Misión</h3>
         <p class="text-gray-600 mt-2">
           Brindar soluciones digitales innovadoras, optimizando procesos y asegurando la <span class="text-red-500 font-semibold">seguridad informática</span> de nuestros clientes.
         </p>
       </div>
 
-      <div class="p-6 bg-gray-50 rounded-xl shadow-md hover:shadow-lg transition transform hover:-translate-y-2 border-t-4 border-blue-500">
+      <div class="p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition transform hover:-translate-y-2 border-t-4 border-blue-500">
         <h3 class="text-2xl font-semibold text-gray-800">🚀 Visión</h3>
         <p class="text-gray-600 mt-2">
           Convertirnos en líderes en transformación digital, ofreciendo servicios tecnológicos de <span class="text-red-500 font-semibold">alta calidad</span> en el mercado global.
         </p>
       </div>
 
-      <div class="p-6 bg-gray-50 rounded-xl shadow-md hover:shadow-lg transition transform hover:-translate-y-2 border-t-4 border-green-500">
+      <div class="p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition transform hover:-translate-y-2 border-t-4 border-green-500">
         <h3 class="text-2xl font-semibold text-gray-800">💡 Valores</h3>
         <p class="text-gray-600 mt-2">
           Innovación, compromiso, transparencia y <span class="text-red-500 font-semibold">orientación al cliente</span> para el éxito de cada proyecto.
@@ -39,7 +56,7 @@ import logo from '../../assets/CacaoByte.png';
     </div>
 
     <!-- CTA (Llamado a la acción) -->
-    <div class="mt-12">
+    <div class="mt-12 text-center py-8">
       <a href="/contacto" class="px-6 py-3 bg-red-500 hover:bg-red-600 text-white rounded-lg shadow-lg transition">
         📩 Contáctanos
       </a>

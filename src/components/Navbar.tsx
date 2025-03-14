@@ -104,7 +104,7 @@ export function Navbar() {
           >
             <nav className="flex flex-col space-y-4">
               <a href="/" className="block p-2 hover:bg-gray-100">Inicio</a>
-              <a href="/about" className="block p-2 hover:bg-gray-100">Nosotros</a>
+              <a href="/about/about" className="block p-2 hover:bg-gray-100">Nosotros</a>
               <a href="/clients" className="block p-2 hover:bg-gray-100">Clientes</a>
 
               {/* 📌 Dropdown Productos */}
