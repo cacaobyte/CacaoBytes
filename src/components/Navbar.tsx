@@ -27,7 +27,7 @@ export function Navbar() {
         <nav className="hidden md:flex space-x-6">
           <a href="/" className="hover:text-blue-600 transition">Inicio</a>
           <a href="/about/about" className="hover:text-blue-600 transition">Nosotros</a>
-          <a href="/clients" className="hover:text-blue-600 transition">Clientes</a>
+          <a href="/clients/clients" className="hover:text-blue-600 transition">Clientes</a>
 
           {/* 🔹 Dropdown Productos */}
           <div className="relative group">
@@ -105,7 +105,7 @@ export function Navbar() {
             <nav className="flex flex-col space-y-4">
               <a href="/" className="block p-2 hover:bg-gray-100">Inicio</a>
               <a href="/about/about" className="block p-2 hover:bg-gray-100">Nosotros</a>
-              <a href="/clients" className="block p-2 hover:bg-gray-100">Clientes</a>
+              <a href="/clients/clients" className="block p-2 hover:bg-gray-100">Clientes</a>
 
               {/* 📌 Dropdown Productos */}
               <button
