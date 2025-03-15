@@ -26,34 +26,48 @@ const ContactForm = () => {
     event.preventDefault();
 
     const templateParams = {
-      name: name, 
-      email: email,  
+      name,
+      email,
       title: subject,
-      message: message,
-   };
-   
+      message,
+    };
 
-    emailjs.send(
-      "service_0bauhcw", // ID del servicio
-      "template_wwpxgtl", // ID de la plantilla
-      templateParams,
-      "lnlmSqUb3K9Dd24F1" // Public Key
-    )
-    .then((response) => {
-      console.log("SUCCESS!", response.status, response.text);
-      setStatus("Mensaje enviado correctamente ✅");
-    })
-    .catch((err) => {
-      console.error("FAILED...", err);
-      setStatus("Error al enviar el mensaje ❌");
-    });
+    emailjs
+      .send(
+        "service_0bauhcw", // ID del servicio
+        "template_wwpxgtl", // ID de la plantilla
+        templateParams,
+        "lnlmSqUb3K9Dd24F1" // Public Key
+      )
+      .then((response) => {
+        console.log("SUCCESS!", response.status, response.text);
+        setStatus("Mensaje enviado correctamente ✅");
+
+        // Limpiar el formulario
+        setName("");
+        setEmail("");
+        setSubject(subjects[0]);
+        setMessage("");
+
+        // Ocultar el mensaje después de 3 segundos
+        setTimeout(() => setStatus(""), 3000);
+      })
+      .catch((err) => {
+        console.error("FAILED...", err);
+        setStatus("Error al enviar el mensaje ❌");
+
+        // Ocultar el mensaje de error después de 3 segundos
+        setTimeout(() => setStatus(""), 3000);
+      });
   };
 
   return (
     <form className="bg-white p-6 sm:p-8 rounded-lg shadow-lg w-full max-w-lg mx-auto mt-6 sm:mt-8" onSubmit={handleSubmit}>
       <div className="grid grid-cols-1 gap-4">
         <div>
-          <label htmlFor="name" className="block text-lg font-semibold text-gray-700">Nombre</label>
+          <label htmlFor="name" className="block text-lg font-semibold text-gray-700">
+            Nombre
+          </label>
           <input
             type="text"
             id="name"
@@ -65,7 +79,9 @@ const ContactForm = () => {
         </div>
 
         <div>
-          <label htmlFor="email" className="block text-lg font-semibold text-gray-700">Correo Electrónico</label>
+          <label htmlFor="email" className="block text-lg font-semibold text-gray-700">
+            Correo Electrónico
+          </label>
           <input
             type="email"
             id="email"
@@ -77,7 +93,9 @@ const ContactForm = () => {
         </div>
 
         <div>
-          <label htmlFor="subject" className="block text-lg font-semibold text-gray-700">Asunto</label>
+          <label htmlFor="subject" className="block text-lg font-semibold text-gray-700">
+            Asunto
+          </label>
           <select
             id="subject"
             className="w-full p-3 border border-gray-300 rounded-lg mt-1 focus:outline-none focus:ring-2 focus:ring-red-500"
@@ -85,13 +103,17 @@ const ContactForm = () => {
             onChange={(e) => setSubject(e.target.value)}
           >
             {subjects.map((option) => (
-              <option key={option} value={option}>{option}</option>
+              <option key={option} value={option}>
+                {option}
+              </option>
             ))}
           </select>
         </div>
 
         <div>
-          <label htmlFor="message" className="block text-lg font-semibold text-gray-700">Mensaje</label>
+          <label htmlFor="message" className="block text-lg font-semibold text-gray-700">
+            Mensaje
+          </label>
           <textarea
             id="message"
             rows={4}
