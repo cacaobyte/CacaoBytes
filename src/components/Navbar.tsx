@@ -129,6 +129,7 @@ export function Navbar() {
 
           <a href="/contact/contact" className="hover:text-blue-600 transition">Contacto</a>
           <a href="/faqs/faqs" className="hover:text-blue-600 transition">Preguntas</a>
+          <a href="/network/SocialMedia" className="hover:text-blue-600 transition">Redes Sociales</a>
         </nav>
 
         {/* 📌 Botón de menú móvil */}
@@ -251,6 +252,7 @@ export function Navbar() {
 
               <a href="/contact/contact" className="block p-2 hover:bg-gray-100">Contacto</a>
               <a href="/faqs/faqs" className="block p-2 hover:bg-gray-100">Preguntas</a>
+              <a href="/network/SocialMedia" className="block p-2 hover:bg-gray-100">Redes Sociales</a>
             </nav>
           </motion.div>
         )}
