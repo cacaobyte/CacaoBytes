@@ -8,7 +8,6 @@ const subjects = [
   "Cotización de Byte Events",
   "Consultas sobre Desarrollo Web",
   "Consultas sobre Software a la Medida",
-  "Consultas sobre Seguridad Informática",
   "Consultas sobre Software como Servicio (SaaS)",
   "Consultas sobre Transformación Digital",
   "Consultas sobre Análisis de Negocios",

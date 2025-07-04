@@ -2,10 +2,9 @@
 export const services = [
     { icon: "🌐", color: "text-blue-600 border-blue-500", title: "Desarrollo Web", description: "Diseñamos experiencias digitales que impulsan negocios." },
     { icon: "⚙️", color: "text-purple-600 border-purple-500", title: "Software a la Medida", description: "Soluciones tecnológicas adaptadas a cada necesidad." },
-    { icon: "🔒", color: "text-yellow-600 border-yellow-500", title: "Seguridad Informática", description: "Protege tus sistemas con auditorías y capacitación." },
     { icon: "☁️", color: "text-green-600 border-green-500", title: "Software como Servicio (SaaS)", description: "Plataformas escalables y accesibles en la nube." },
     { icon: "🚀", color: "text-red-600 border-red-500", title: "Transformación Digital", description: "Impulsamos la modernización de empresas con tecnología." },
-    { icon: "📊", color: "text-blue-600 border-blue-500", title: "Inteligencia de Negocios", description: "Analizamos datos y potenciamos la toma de decisiones." }
+    // { icon: "📊", color: "text-blue-600 border-blue-500", title: "Inteligencia de Negocios", description: "Analizamos datos y potenciamos la toma de decisiones." }
   ];
   
   export const advantages = [

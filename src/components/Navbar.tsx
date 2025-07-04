@@ -97,12 +97,12 @@ export function Navbar() {
               >
               <span className="text-gray-800">Software a la Medida</span>
               </a>
-              <a 
+              {/* <a 
                 href="/services/security/security" 
                 className="flex items-center gap-2 px-4 py-2 hover:bg-gray-200 transition"
               >
              <span className="text-gray-800">Seguridad Informática</span>
-              </a>
+              </a> */}
               <a 
                 href="/services/saas/saas" 
                 className="flex items-center gap-2 px-4 py-2 hover:bg-gray-200 transition"
@@ -115,12 +115,12 @@ export function Navbar() {
               >
              <span className="text-gray-800">Transformación Digital</span>
               </a>
-              <a 
+              {/* <a 
                 href="/services/business/business" 
                 className="flex items-center gap-2 px-4 py-2 hover:bg-gray-200 transition"
               >
               <span className="text-gray-800">Análisis de Negocios</span>
-              </a>
+              </a> */}
             </motion.div>
           )}
         </div>
